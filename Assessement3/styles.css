@@ -3,7 +3,7 @@ body {
 }
 
 a {
-    color: darkred;
+    color: darkblue;
     text-decoration: none;
     display: block;
     margin-bottom: 10px;
@@ -32,14 +32,43 @@ header h1 {
     margin-bottom: 5px;
 }
 
+header h2 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    text-align: right;
+    font-size: 20px;
+    color: darkcyan;
+}
+
+main h3 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 20px;
+    color: darkcyan;
+}
+
 header img {
     width: 100%;
+}
+
+.books {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.books img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 footer {
     margin-top: 20px;
     min-height: 30px;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: lighter;
     text-align: right;
     font-style: italic;
