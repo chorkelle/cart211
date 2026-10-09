@@ -117,6 +117,58 @@ footer {
     color: darkcyan;
 }
 
+@media (max-width: 480px) {
+
+    nav {
+        margin: 0 auto;
+        margin-bottom: 0px;
+        justify-content: space-around;
+        width: 100%;
+        line-height: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        float: none;
+    }
+
+    nav a {
+        text-decoration: none;
+        padding: 25px;
+        color: darkcyan;
+        font-weight: bold;
+        display: block;
+    }
+
+    #wrapper {
+        margin-top: 30px;
+        margin: 0 auto;
+        float: none;
+        width: 90%;
+        margin-right: 50 px;
+    }
+
+    .books {
+        grid-template-columns: auto auto;
+        gap: 16px;
+        float: none;
+    }
+
+    article figure figcaption {
+        margin-top: 5px;
+        font-size: 10px;
+    }
+
+    footer {
+        justify-content: center;
+        margin-top: 20px;
+        min-height: 30px;
+        font-size: 10px;
+        font-weight: lighter;
+        text-align: center;
+        font-style: italic;
+        color: darkcyan;
+    }
+}
 
 /*
     Comment
