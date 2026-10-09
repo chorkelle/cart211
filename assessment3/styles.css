@@ -116,6 +116,34 @@ footer {
     font-style: italic;
 }
 
+@media (max-width: 480px) {
+
+    nav {
+        margin: 0 auto;
+        margin-left: 40px;
+        margin-top: 40px;
+        float: center;
+        width: 100%;
+        line-height: 30px;
+        position: relative;
+        display: flex;
+        box-sizing: border-box;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: darkcyan;
+        font-weight: bold;
+        display: block;
+    }
+
+    .books {
+        grid-template-columns: auto auto;
+        gap: 16px;
+        float: none;
+    }
+}
+
 /*
     Comment
 */
