@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Video</title>
+
+    <style>
+        /* Remove the default spacing and makes the page fill the screen */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Sets the main page dimensions and default font */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            color: white;
+            background-color: black;
+        }
+
+        /* Positions the video behind the entire page */
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: center;
+
+            z-index: -1;
+            /* Places the video behind the content */
+        }
+
+        /* Adds a dark overlay to make text easier to read */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Last variable controls the darkness: 0 is transparent, 1 is opaque */
+
+            z-index: 0;
+        }
+
+        /* Positions the website content above the video and overlay */
+        .content {
+            position: relative;
+            z-index: 1;
+
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* Centers content vertically */
+            align-items: center;
+            /* Centers content horizontally */
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- BG video that plays automatically and repeats -->
+    <video class="background-video" autoplay muted loop playsinLine aria-hidden="true" tabindex="-1">
+        <source src="video.mp4" type="video/mp4"> Your browser does not support background video.
+    </video>
+
+    <!-- Darkens the BG video so that the text is visible -->
+    <div class="overlay"></div>
+
+    <main class="content">
+        <h1>Snowy Video</h1>
+        <p>This is a snowy video background</p>
+    </main>
+</body>
+
+</html>
