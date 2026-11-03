@@ -7,8 +7,10 @@ body {
     /* Use Libre Franklin as the main font.
        Use a sans-serif font if it is unavailable. */
 
-    font-weight: 900;
+    font-weight: 750;
     /* Make the text very bold. */
+
+    color: rgb(123, 25, 45);
 
     font-size: 1em;
     /* Use the default font size as the reference size. */
@@ -154,7 +156,7 @@ body {
     font-size: 2em;
     /* Make the hamburger icon larger. */
 
-    color: gray;
+    color: rgb(205, 80, 107);
     /* Set the icon color to gray. */
 }
 
@@ -188,6 +190,10 @@ h1 {
     font-size: 4em;
     /* Make the heading four times the base font size. */
 
+    font-weight: 900;
+
+    color: black;
+
     margin-top: 0;
 
     margin-bottom: 0;
@@ -207,7 +213,7 @@ h2 {
     font-size: 20px;
     /* Set the font size to 20 pixels. */
 
-    color: grey;
+    color: rgb(72, 27, 56);
     /* Use dark gray text. */
 }
 
@@ -243,7 +249,7 @@ h3 {
     font-size: 20px;
     /* Set the font size to 20 pixels. */
 
-    color: darkgray;
+    color: rgb(185, 53, 79);
     /* Use dark gray text. */
 }
 
@@ -287,7 +293,7 @@ nav a {
 }
 
 nav a:hover {
-    color: darkgrey;
+    color: rgb(185, 53, 79);
     /* Change the link color when hovered over. */
 }
 
@@ -300,7 +306,7 @@ nav a:hover {
     text-align: right;
     /* Align the active menu item to the right. */
 
-    color: gray;
+    color: rgb(185, 53, 79);
     /* Give the active item a gray color. */
 }
 
@@ -327,7 +333,7 @@ article h3 {
     margin-bottom: 10px;
     /* Add space below article headings. */
 
-    color: darkgray;
+    color: rgb(185, 53, 79);
     /* Make article headings dark gray. */
 }
 
@@ -342,6 +348,8 @@ footer {
 
     min-height: 30px;
     /* Make the footer at least 30px tall. */
+
+    color: rgb(185, 53, 79);
 
     font-size: 10px;
     /* Use small text for footer information. */
@@ -360,7 +368,7 @@ footer a {
     text-decoration: none;
     /* Remove underlines from footer links. */
 
-    color: black;
+    color: rgb(185, 53, 79);
     /* Make footer links black. */
 }
 
@@ -385,8 +393,6 @@ footer a {
 .stories {
     text-align: left;
 
-    /* grid-row: 1/13; */
-
     grid-column: 7 / 13;
     /* Span columns 7 through 12. */
 
@@ -399,7 +405,7 @@ footer a {
     font-size: 1.2em;
     /* Increase the text size by 20%. */
 
-    line-height: 1.5em;
+    line-height: 1.25em;
     /* Add vertical space between lines for readability. */
 }
 
@@ -732,12 +738,24 @@ Social media container */
     }
 
     /* Set mobile menu link colors and decorations. */
-    .menu1 a,
+    .menu1 a {
+        text-decoration: none;
+        /* Remove link underlines. */
+
+        color: black;
+        /* Set links to gray. */
+
+        background-color: transparent;
+        /* Keep link backgrounds transparent. */
+
+        font-weight: 900;
+    }
+
     .menu1 a:hover {
         text-decoration: none;
         /* Remove link underlines. */
 
-        color: gray;
+        color: rgb(185, 53, 79);
         /* Set links to gray. */
 
         background-color: transparent;
@@ -803,7 +821,7 @@ Social media container */
         font-size: 2em;
         /* Make the icon larger. */
 
-        color: gray;
+        color: rgb(185, 53, 79);
         /* Set the icon color to gray. */
     }
 
