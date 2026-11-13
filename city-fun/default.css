@@ -204,6 +204,7 @@ nav a:hover {
 }
 
 .menuI {
+    padding: 9px;
     text-align: left;
     /* Align this menu item to the right. */
 }
@@ -283,7 +284,7 @@ footer a {
 
 
 
-/* Left column of the story page. */
+/* Image of mayor. */
 .left_mayor {
     grid-column: 1 / 6;
     /* Span five grid columns, from line 1 to line 6. */
@@ -317,6 +318,134 @@ footer a {
     /* Remove the top margin from story paragraphs. */
 }
 
+/* =====================================================
+   8. HISTORY PAGE LAYOUT
+   ===================================================== */
+
+.history_h2 {
+    text-align: left;
+    /* Align the main heading to the left. */
+
+    font-size: 2em;
+    /* Make the heading four times the base font size. */
+
+    color: #000000;
+
+    margin-top: 2em;
+    margin-bottom: 2em;
+    /* Add space below the heading. */
+
+}
+
+/* Image of statue. */
+.left_statue {
+    grid-column: 1 / 6;
+    /* Span five grid columns, from line 1 to line 6. */
+    grid-row: 1/6;
+    margin: 0;
+    /* Remove outer spacing. */
+
+    padding: 0;
+    /* Remove inner spacing. */
+}
+
+.history_text {
+    grid-column: 7 / 13;
+    /* Span columns 7 through 12. */
+
+    grid-row: 1/4;
+
+    margin: 0;
+    /* Remove outer spacing. */
+
+    padding: 0;
+    /* Remove inner spacing. */
+
+    font-size: 1.2em;
+    /* Increase the text size by 20%. */
+
+    line-height: 1.5em;
+    /* Add vertical space between lines for readability. */
+}
+
+.history_text p {
+    margin-top: 0;
+    /* Remove the top margin from story paragraphs. */
+}
+
+/* =====================================================
+   8. POLITICS PAGE LAYOUT
+   ===================================================== */
+
+.history_h2 {
+    text-align: left;
+    /* Align the main heading to the left. */
+
+    font-size: 2em;
+    /* Make the heading four times the base font size. */
+
+    color: #000000;
+
+    margin-top: 2em;
+    margin-bottom: 2em;
+    /* Add space below the heading. */
+
+}
+
+/* Image of statue. */
+.center_graph {
+    grid-column: 5 / 9;
+    /* Span five grid columns, from line 1 to line 6. */
+    grid-row: 1/6;
+    margin: 0;
+    /* Remove outer spacing. */
+
+    padding: 0;
+    /* Remove inner spacing. */
+}
+
+.politics_a {
+    grid-column: 1 / 4;
+    /* Span columns 7 through 12. */
+
+    grid-row: 1/4;
+
+    margin: 0;
+    /* Remove outer spacing. */
+
+    padding: 0;
+    /* Remove inner spacing. */
+
+    font-size: 1.2em;
+    /* Increase the text size by 20%. */
+
+    line-height: 1.5em;
+    /* Add vertical space between lines for readability. */
+}
+
+.politics_b {
+    grid-column: 10 / 13;
+    /* Span columns 7 through 12. */
+
+    grid-row: 1/4;
+
+    margin: 0;
+    /* Remove outer spacing. */
+
+    padding: 0;
+    /* Remove inner spacing. */
+
+    font-size: 1.2em;
+    /* Increase the text size by 20%. */
+
+    line-height: 1.5em;
+    /* Add vertical space between lines for readability. */
+}
+
+.history_text p {
+    margin-top: 0;
+    /* Remove the top margin from story paragraphs. */
+}
 
 /* =====================================================
    9. DESKTOP IMAGE GRID
