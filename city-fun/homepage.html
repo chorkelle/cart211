@@ -88,17 +88,10 @@
             <!-- NAV: contains links that help visitors move around the website. -->
             <nav>
 
-
-
                 <!-- Navigation links.
                      CSS displays these horizontally on desktop
                      and as a menu panel on smaller screens. -->
                 <div class="menu1">
-
-                    <!-- The X button closes the mobile navigation menu. -->
-                    <button type="button" class="close-menu" aria-label="Close Navigation menu">
-                        &times
-                    </button>
 
                     <!-- Reopens the Home page -->
                     <a href="homepage.html" class="menuI">HOME</a>
@@ -109,14 +102,11 @@
         </header>
 
         <!-- FIGURE 1: image, and caption. -->
-
-        <figure class="background-photo">
-            <img src="assets/city.jpg" class="main" alt="City landscape portait">
-
-
-        </figure>
-
-
+        <div>
+            <figure class="background-photo">
+                <img src="assets/city.jpg" class="main" alt="City landscape portait">
+            </figure>
+        </div>
 
         <!-- SECTION: groups the main content of the page. -->
         <section class="content">
@@ -128,17 +118,42 @@
                 <!-- A page generally uses one main H1 heading. -->
                 <h1>Welcome To XXX!</h1>
 
-                <!-- Introductory paragraph.
+                <div class="pict">
+                    <figure class="left_mayor">
+                        <img src="assets/mayor.jpg" width="1200px" height="790px" class="im">
+                    </figure>
+
+
+                    <div class="intro_text">
+                        <!-- Introductory paragraph.
                      The intro class lets CSS apply specific font and spacing styles. -->
-                <p class="intro">
-                    XXX
-                </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            Aenean
+                            massa. Cum sociis
+                            natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                            ultricies nec, pellentesque
+                            eu, pretium quis, sem.
+                        </p>
 
-                <!-- A second introductory paragraph explaining the project. -->
-                <p class="intro">
-                    XXX
-                </p>
-
+                        <!-- A second introductory paragraph explaining the project. -->
+                        <p>
+                            Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus
+                            eget
+                            condimentum rhoncus, sem
+                            quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel,
+                            luctus
+                            pulvinar, hendrerit id,
+                            lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis
+                            faucibus.
+                            Nullam quis <a href="history.html">history</a>.
+                            Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet
+                            nibh.
+                            Donec sodales sagittis
+                            magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+                        </p>
+                    </div>
+                </div>
 
             </article>
         </section>

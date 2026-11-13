@@ -3,7 +3,7 @@
    ===================================================== */
 
 body {
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     /* Use Libre Franklin as the main font.
        Use a sans-serif font if it is unavailable. */
 
@@ -24,6 +24,8 @@ body {
 /* =====================================================
    2. IMAGE HOVER EFFECTS
    ===================================================== */
+
+
 
 /* Position each figure so text can appear over its image. */
 .pict figure {
@@ -46,67 +48,6 @@ body {
     /* Animate zoom and transparency changes over 0.3 seconds. */
 }
 
-/* Hide the text until the image is hovered over. */
-.hover-text {
-    display: none;
-    /* Hide the text by default. */
-
-    position: absolute;
-    /* Allow the text to sit on top of the image. */
-
-    bottom: 30px;
-    /* Place the text 30px above the bottom edge. */
-
-    left: 10px;
-    /* Place the text 10px from the left edge. */
-
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Use a black background with 70% opacity. */
-
-    color: white;
-    /* Make the text white. */
-
-    padding: 8px;
-    /* Add space inside the text box. */
-
-    border-radius: 4px;
-    /* Slightly round the box corners. */
-
-    white-space: nowrap;
-    /* Keep the text on one line. */
-}
-
-/* Reveal the text when the figure is hovered over. */
-.pict figure:hover .hover-text {
-    display: block;
-    /* Change the text from hidden to visible. */
-}
-
-/* Enlarge and slightly fade images on hover. */
-.pict figure:hover img {
-    transform: scale(1.05);
-    /* Increase the image size by 5%. */
-
-    opacity: 0.9;
-    /* Make the image slightly transparent. */
-}
-
-/* Apply a blur and zoom effect to images with class "im". */
-.im:hover {
-    filter: blur(2px);
-    /* Add a small blur of 2 pixels. */
-
-    opacity: 0.9;
-    /* Reduce the opacity slightly. */
-
-    transform: scale(1.05);
-    /* Enlarge the image by 5%. */
-
-    transition: all 0.3s ease-in-out;
-    /* Animate property changes over 0.3 seconds.
-       For smooth transitions in both directions, it is
-       usually better to put this in the normal .im rule. */
-}
 
 
 /* =====================================================
@@ -123,49 +64,15 @@ body {
     justify-content: space-around;
     /* Distribute space around the menu items. */
 
-    align-items: center;
+    align-items: left;
     /* Vertically center the menu items. */
 }
 
 .menu1 a {
     display: block;
+
+    align-items: left;
     /* Make each link a block-level element. */
-}
-
-/* Hide the hamburger menu by default on desktop. */
-.hamburger-menu {
-    display: none;
-    /* The mobile media query will display it. */
-
-    align-items: center;
-    /* Vertically center its contents when using Flexbox. */
-
-    justify-content: center;
-    /* Horizontally center its contents. */
-}
-
-.hamburger-menu button {
-    background: none;
-    /* Remove the default button background. */
-
-    border: none;
-    /* Remove the button border. */
-
-    font-size: 2em;
-    /* Make the hamburger icon larger. */
-
-    color: gray;
-    /* Set the icon color to gray. */
-}
-
-.hamburger-menu button .fa-bars {
-    cursor: pointer;
-    /* Show a hand cursor over the hamburger icon. */
-}
-
-/* Hide the close button by default. */
-.close-menu {
-    display: none;
 }
 
 
@@ -181,7 +88,7 @@ body {
     /* Center the container horizontally. */
 }
 
-header h1 {
+h1 {
     text-align: center;
     /* Align the main heading to the left. */
 
@@ -190,8 +97,9 @@ header h1 {
 
     color: #fefefe;
 
-    margin-bottom: 1em;
+    margin-bottom: 3.5em;
     /* Add space below the heading. */
+
 }
 
 header h2 {
@@ -211,16 +119,24 @@ header h2 {
     /* Use dark gray text. */
 }
 
+figure {
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
 .stories_title {
     text-align: right;
     /* Align the stories title to the right. */
 
-    font-size: 3em;
+    margin-bottom: 1em;
+    /* Add space below the introduction. */
+
+    font-size: 1em;
     /* Make the title three times the base font size. */
 }
 
 .intro {
-    font-size: 2em;
+    font-size: 1.25em;
     /* Make the introduction text larger. */
 
     margin-bottom: 1em;
@@ -229,6 +145,7 @@ header h2 {
     text-align: justify;
     /* Align paragraph text along both edges. */
 }
+
 
 header h3 {
     margin-top: 0px;
@@ -256,11 +173,11 @@ nav {
     display: grid;
     /* Use CSS Grid to organize the navigation. */
 
-    grid-template-columns: 60% 1fr;
+    grid-template-columns: 10% 1fr;
     /* First column: 60% of the grid width.
        Second column: the remaining available space. */
 
-    align-items: center;
+    align-items: left;
     /* Vertically center the contents. */
 
     font-size: 2em;
@@ -268,11 +185,6 @@ nav {
 
     margin-top: 50px;
     /* Add space above the navigation bar. */
-}
-
-.logo {
-    text-align: left;
-    /* Align the logo to the left. */
 }
 
 nav a {
@@ -292,12 +204,12 @@ nav a:hover {
 }
 
 .menuI {
-    text-align: right;
+    text-align: left;
     /* Align this menu item to the right. */
 }
 
 .menuI_active {
-    text-align: right;
+    text-align: left;
     /* Align the active menu item to the right. */
 
     color: gray;
@@ -366,14 +278,16 @@ footer a {
 
 
 /* =====================================================
-   8. STORY PAGE LAYOUT
+   8. INTRO PAGE LAYOUT
    ===================================================== */
 
+
+
 /* Left column of the story page. */
-.left_stories {
+.left_mayor {
     grid-column: 1 / 6;
     /* Span five grid columns, from line 1 to line 6. */
-
+    grid-row: 1/6;
     margin: 0;
     /* Remove outer spacing. */
 
@@ -381,8 +295,7 @@ footer a {
     /* Remove inner spacing. */
 }
 
-/* Right column containing the story text. */
-.stories {
+.intro_text {
     grid-column: 7 / 13;
     /* Span columns 7 through 12. */
 
@@ -399,7 +312,7 @@ footer a {
     /* Add vertical space between lines for readability. */
 }
 
-.stories p {
+.intro_text p {
     margin-top: 0;
     /* Remove the top margin from story paragraphs. */
 }
@@ -411,16 +324,14 @@ footer a {
 
 /* Positions the photo behind the entire page */
 .background-photo {
-    grid-row: 1/5;
-    grid-column: 1/12;
 
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     margin-left: none;
     padding: none;
     width: 100%;
-    height: 100%;
+    height: 60%;
 
     object-fit: cover;
     object-position: center;
