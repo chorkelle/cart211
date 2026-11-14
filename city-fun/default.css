@@ -779,6 +779,62 @@ footer a {
     /* Remove the top margin from story paragraphs. */
 }
 
+/* =====================================================
+   8. BOOKING PAGE LAYOUT
+   ===================================================== */
+
+.booking_im {
+    width: 100%;
+    /* Fill the available width of the grid cell. */
+
+    height: 200%;
+    /* Allow the image height to adjust automatically. */
+    /* Request a square image area. */
+
+    object-fit: cover;
+    /* Fill the area without stretching the image.
+       The image may be cropped to fit. */
+}
+
+/* Positions the photo behind the entire page */
+.background-photo_booking {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: none;
+    padding: none;
+    width: 100%;
+    height: 60%;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: -1;
+    /* Places the video behind the content */
+}
+
+.booking_text {
+    grid-column: 7 / 13;
+    /* Span columns 7 through 12. */
+
+    margin: 0;
+    /* Remove outer spacing. */
+
+    padding: 0;
+    /* Remove inner spacing. */
+
+    font-size: 1.2em;
+    /* Increase the text size by 20%. */
+
+    line-height: 1.5em;
+    /* Add vertical space between lines for readability. */
+}
+
+.booking_text p {
+    margin-top: 0;
+    /* Remove the top margin from story paragraphs. */
+}
 
 /* =====================================================
 Social media container */
