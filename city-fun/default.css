@@ -4,10 +4,8 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    /* Use Libre Franklin as the main font.
-       Use a sans-serif font if it is unavailable. */
 
-    font-weight: 900;
+    font-weight: 200;
     /* Make the text very bold. */
 
     font-size: 1em;
@@ -180,7 +178,7 @@ nav {
     align-items: left;
     /* Vertically center the contents. */
 
-    font-size: 2em;
+    font-size: 1em;
     /* Enlarge the navigation text. */
 
     margin-top: 50px;
