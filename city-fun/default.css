@@ -205,6 +205,7 @@ nav a:hover {
     padding: 9px;
     text-align: left;
     /* Align this menu item to the right. */
+    text-decoration: none;
 }
 
 .menuI_active {
