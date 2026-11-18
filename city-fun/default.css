@@ -180,23 +180,22 @@ nav {
     font-size: 1em;
     /* Enlarge the navigation text. */
 
-    margin-top: 50px;
-    /* Add space above the navigation bar. */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 nav a {
     text-decoration: none;
     /* Remove the link underline. */
 
-    color: black;
+    color: rgb(0, 0, 0);
     /* Make links black. */
 
     font-weight: bold;
-    /* Make links bold. */
 }
 
 nav a:hover {
-    color: rgb(0, 0, 0);
+    color: rgb(33, 66, 39);
     /* Change the link color when hovered over. */
 
 }
@@ -278,32 +277,64 @@ footer a {
 
 
 /* =====================================================
-   8. INTRO PAGE LAYOUT
+   8. IMAGE BANNER
    ===================================================== */
-/* Positions the photo behind the entire page */
-.background-photo {
 
-    position: absolute;
+/* The container creates a positioning context for the text */
+.banner-container {
+    position: relative;
     top: 0;
     left: 0;
-    margin-left: none;
-    padding: none;
     width: 100%;
-    height: 60%;
+    margin: 0 auto;
+    /* Centers the banner on the page */
+    overflow: hidden;
 
-    object-fit: cover;
-    object-position: center;
-
-    z-index: -1;
-    /* Places the video behind the content */
+    margin-bottom: 1em;
 }
 
+/* Makes sure the image scales responsively */
+.banner-image {
+    display: block;
+    width: 100%;
+    height: 400px;
+
+
+}
+
+/* Positions the text box directly on top of the image */
+.banner-text {
+    position: absolute;
+
+    /* Centering formula */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Text aesthetics & readability fixes */
+    color: #ffffff;
+    text-align: center;
+    width: 80%;
+    /* Prevents text from touching edge of image */
+
+    /* Optional: Adds a dark tint box to ensure readability */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* =====================================================
+   8. INTRO PAGE LAYOUT
+   ===================================================== */
 
 /* Image of mayor. */
 .left_mayor {
     grid-column: 1 / 6;
     /* Span five grid columns, from line 1 to line 6. */
     grid-row: 1/6;
+
+    width: 100%;
+
     margin: 0;
     /* Remove outer spacing. */
 
@@ -314,6 +345,8 @@ footer a {
 .intro_text {
     grid-column: 7 / 13;
     /* Span columns 7 through 12. */
+
+    margin-top: auto;
 
     margin: 0;
     /* Remove outer spacing. */
@@ -329,7 +362,7 @@ footer a {
 }
 
 .intro_text p {
-    margin-top: 0;
+    margin-top: auto;
     /* Remove the top margin from story paragraphs. */
 }
 
@@ -356,6 +389,7 @@ footer a {
 }
 
 .history_h2 {
+
     text-align: left;
     /* Align the main heading to the left. */
 
@@ -372,6 +406,8 @@ footer a {
 
 /* Image of statue. */
 .left_statue {
+
+
     grid-column: 1 / 6;
     /* Span five grid columns, from line 1 to line 6. */
     grid-row: 1/6;
@@ -411,6 +447,8 @@ footer a {
    ===================================================== */
 
 .history_h2 {
+
+
     text-align: left;
     /* Align the main heading to the left. */
 
@@ -945,111 +983,6 @@ footer a {
     /* Remove the top margin from story paragraphs. */
 }
 
-/* =====================================================
-Social media container */
-
-.social-icons {
-    display: flex;
-    /* Arrange icons in a row. */
-
-    justify-content: center;
-    /* Center the icons horizontally. */
-    align-items: center;
-
-    flex-wrap: wrap;
-    /* Allow icons to move onto another line when needed. */
-
-    gap: 10px;
-    /* Add 10px between the icons. */
-
-    width: 100%;
-    /* Fill the available container width. */
-}
-
-/* Common icon styles */
-.social {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: white;
-    font-size: 15px;
-    text-decoration: none;
-
-    border-radius: 50%;
-    /* Adds a smooth animation when the icon's transform or shadow changes */
-    transition: transform 0.3s ease,
-        box-shadow 0.3s ease;
-
-    /* transform: Animates movement, rotation, or scaling over 0.3 seconds */
-    /* box-shadow: Smoothly animates changes to the icon's shadow over 0.3 seconds */
-    /* ease: Makes the animation start slowly, speed up, and then slow down */
-}
-
-/* Individual brand colors */
-.facebook {
-    background: #1877f2;
-}
-
-.instagram {
-    /* Sets the gradient direction to 45 degrees */
-    background: linear-gradient(45deg,
-            /* Sets the gradient direction to 45 degrees */
-            #feda75,
-            /* Yellow */
-            #fa7e1e,
-            /* Orange */
-            #d62976,
-            /* Pink */
-            #962fbf,
-            /* Purple */
-            #4f5bd5
-            /* Blue */
-        );
-}
-
-.twitter {
-    background: #000000;
-}
-
-.tiktok {
-    background: #111111;
-}
-
-.youtube {
-    background: #ff0000;
-}
-
-.linkedin {
-    background: #0a66c2;
-}
-
-.github {
-    background: #24292f;
-}
-
-/* Hover effects */
-/* Applies these styles when the user moves the mouse over a social media icon */
-.social:hover {
-    /* Moves the icon upward by 6px and enlarges it by 8% */
-    transform: translateY(-6px) scale(1.08);
-
-    /* Adds a soft shadow beneath the icon to create a floating effect */
-    /* Values: horizontal offset, vertical offset, blur radius, and shadow color */
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
-}
-
-/* Keyboard accessibility */
-/* Applies these styles when the icon is focused using keyboard navigation, such as the Tab key */
-.social:focus-visible {
-    /* Adds a 3px light-blue outline around the icon to indicate keyboard focus */
-    outline: 3px solid #38bdf8;
-
-    /* Adds 5px of space between the outline and the icon */
-    outline-offset: 5px;
-}
 
 
 /* =====================================================
@@ -1075,14 +1008,6 @@ Social media container */
 /* Apply these styles when the screen is 1024px wide or less. */
 @media (max-width: 1024px) {
 
-    /* Show the hamburger menu on smaller screens. */
-    .hamburger-menu {
-        display: flex;
-        /* Display the hamburger container using Flexbox. */
-
-        align-items: center;
-        /* Center its contents vertically. */
-    }
 
     /* Set mobile menu link colors and decorations. */
     .menu1 a,
@@ -1090,7 +1015,7 @@ Social media container */
         text-decoration: none;
         /* Remove link underlines. */
 
-        color: gray;
+        color: rgb(255, 255, 255);
         /* Set links to gray. */
 
         background-color: transparent;
@@ -1139,33 +1064,6 @@ Social media container */
         /* Add space inside each link. */
     }
 
-    /* Display the close-menu button. */
-    .close-menu {
-        display: block;
-        /* Make the button visible. */
-
-        position: absolute;
-        /* Allow precise positioning. */
-
-        top: 20px;
-        /* Place it 20px from the top. */
-
-        right: 20px;
-        /* Place it 20px from the right. */
-
-        font-size: 2em;
-        /* Make the icon larger. */
-
-        color: gray;
-        /* Set the icon color to gray. */
-    }
-
-    /* The original CSS sets the hamburger to block here.
-       This overrides its earlier display:flex declaration. */
-    .hamburger-menu {
-        display: block;
-        /* Display the hamburger container as a block. */
-    }
 
     /* Apply this class when the mobile menu is opened. */
     .menu-deployed {
@@ -1212,12 +1110,6 @@ Social media container */
         /* Make the active link black. */
     }
 
-    /* Remove any grid-column placement from the hamburger. */
-    .hamburger-menu {
-        grid-column: auto;
-        /* Let the browser position it automatically in a grid. */
-    }
-
     /* Remove borders and give buttons a white background. */
     button {
         border-width: 0px;
@@ -1227,58 +1119,42 @@ Social media container */
         /* Set the background to white. */
     }
 
-    /* Redesign the navigation bar for mobile screens. */
     nav {
-        margin: 0 auto;
-        /* Center the navigation horizontally. */
 
-        margin-bottom: 50px;
-        /* Add space below the navigation. */
+        align-items: left;
+        /* Vertically center the contents. */
 
-        width: 100%;
-        /* Fill the available width. */
+        font-size: 1em;
+        /* Enlarge the navigation text. */
 
-        box-sizing: border-box;
-        /* Include padding and borders in the width. */
-
-        padding: 10px 20px;
-        /* Add vertical and horizontal spacing. */
-
-        line-height: 30px;
-        /* Set the line height to 30px. */
-
-        position: relative;
-        /* Establish a positioning reference. */
-
-        display: flex;
-        /* Replace the desktop grid with Flexbox. */
-
-        justify-content: space-between;
-        /* Separate navigation items horizontally. */
-
-        align-items: center;
-        /* Vertically center navigation items. */
-
-        flex-wrap: wrap;
-        /* Allow items to wrap onto another line. */
-
-        border-bottom: 4px solid #000;
-        /* Add a black bottom border. */
-
-        background: #000;
-        /* Make the navigation background black. */
+        margin-top: 50px;
+        /* Add space above the navigation bar. */
 
         z-index: 1000;
-        /* Keep navigation above most content. */
+    }
 
-        color: white;
-        /* Make inherited navigation text white. */
+    nav a {
+        text-decoration: none;
+        /* Remove the link underline. */
+
+        color: black;
+        /* Make links black. */
+
+        font-weight: bold;
+        /* Make links bold. */
+    }
+
+    nav a:hover {
+        color: rgb(0, 0, 0);
+        /* Change the link color when hovered over. */
+
     }
 
     /* Add spacing above the main heading on mobile. */
     h1 {
-        margin-top: 50px;
+        margin-top: 10px;
         /* Add 50px of space above the heading. */
+        font-size: 2em;
     }
 
     /* Make mobile navigation links white. */
@@ -1317,6 +1193,66 @@ Social media container */
         /* Increase footer text to 12px. */
     }
 
+    /* =====================================================
+       8. INTRO PAGE LAYOUT
+       ===================================================== */
+
+    /* Positions the photo behind the entire page */
+    .background-photo {
+
+        position: fixed;
+
+        top: 0;
+        left: 0;
+        margin-left: none;
+        padding: none;
+        width: 100%;
+        height: 20%;
+        max-width: 100%;
+        margin-bottom: 20px;
+
+        object-fit: cover;
+        object-position: center;
+
+        z-index: -1;
+        /* Places the video behind the content */
+    }
+
+    /* Image of mayor. */
+    .left_mayor {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        margin: 0;
+        /* Remove outer spacing. */
+
+        padding: 0;
+        /* Remove inner spacing. */
+    }
+
+    .intro_text {
+
+        margin-top: auto;
+
+        margin: 0;
+        /* Remove outer spacing. */
+
+        padding: 0;
+        /* Remove inner spacing. */
+
+        font-size: 1.2em;
+        /* Increase the text size by 20%. */
+
+        line-height: 1.5em;
+        /* Add vertical space between lines for readability. */
+    }
+
+    .intro_text p {
+        margin-top: auto;
+        /* Remove the top margin from story paragraphs. */
+    }
 
     /* =================================================
    19. TWO-COLUMN MOBILE IMAGE GRID
