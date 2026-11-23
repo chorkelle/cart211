@@ -1100,6 +1100,33 @@ footer a {
     /* Span four rows. */
 }
 
+/* Image 3: large rectangle on the right. */
+.photo4 {
+    grid-column: 9 / 11;
+    /* Span six columns. */
+
+    grid-row: 6 / 9;
+    /* Span four rows. */
+}
+
+/* Image 3: large rectangle on the right. */
+.photo5 {
+    grid-column: 10 / 13;
+    /* Span six columns. */
+
+    grid-row: 8 / 10;
+    /* Span four rows. */
+}
+
+/* Image 3: large rectangle on the right. */
+.photo6 {
+    grid-column: 4/ 7;
+    /* Span six columns. */
+
+    grid-row: 3 / 7;
+    /* Span four rows. */
+}
+
 /* =====================================================
    16. WELCOME PAGE
    ===================================================== */
