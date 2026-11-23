@@ -1101,6 +1101,28 @@ footer a {
 }
 
 /* =====================================================
+   16. WELCOME PAGE
+   ===================================================== */
+
+/* Positions the photo behind the entire page */
+.background-photo_welcome {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: none;
+    padding: none;
+    width: 100%;
+    height: 60%;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: -1;
+    /* Places the video behind the content */
+}
+
+/* =====================================================
    16. CREDITS
    ===================================================== */
 
