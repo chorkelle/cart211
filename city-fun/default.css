@@ -1574,7 +1574,3 @@ $ = End (ends with)
     }
 
 }
-
-/* End of the media query.
-   All rules above this closing brace inside the media query
-   apply to screens 1024px wide or narrower. */
