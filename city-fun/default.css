@@ -3,12 +3,15 @@
    ===================================================== */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Public Sans',
+        sans-serif;
+
+    font-style: normal;
 
     font-weight: 200;
     /* Make the text very bold. */
 
-    font-size: 1em;
+    font-optical-sizing: auto;
     /* Use the default font size as the reference size. */
 
     padding: 0;
@@ -929,28 +932,28 @@ footer a {
     /* Places the video behind the content */
 }
 
-.booking_text {
-    grid-column: 7 / 13;
-    /* Span columns 7 through 12. */
-
-    margin: 0;
-    /* Remove outer spacing. */
-
-    padding: 0;
-    /* Remove inner spacing. */
-
-    font-size: 1.2em;
-    /* Increase the text size by 20%. */
-
-    line-height: 1.5em;
-    /* Add vertical space between lines for readability. */
+.booking-sheet {
+    width: 300px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    background: white;
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: center;
 }
 
-.booking_text p {
-    margin-top: 0;
-    /* Remove the top margin from story paragraphs. */
+.booking-form {
+    margin-top: 50px;
 }
 
+.booking-box {
+    margin-top: 20px;
+    margin: 15px;
+}
+
+.booking-button {
+    padding: 20px;
+    margin-top: 20px;
+}
 
 /* =====================================================
    8. REVIEWS PAGE LAYOUT
